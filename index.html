@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order & Payment Demo (No Backend)</title>
+<title>Order & Payment Demo </title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -288,7 +288,7 @@ function submitOrder() {
   } else {
     showProcessingPayment();
     setTimeout(() => {
-      const success = Math.random() < 0.85; // ৮৫% সময় সফল দেখাবে (demo purpose)
+      const success = Math.random() < 0.85; 
       finalizeOrder(qty, cname, cphone, caddress, paymethod, success);
     }, 2000);
   }
