@@ -134,7 +134,7 @@
 
 <header>
   🛒 Online Business Management System — Order &amp; Payment
-  
+
 </header>
 
 <div class="container">
@@ -169,14 +169,14 @@
 </div>
 
 <script>
+
 /* ---------------- In-memory "database" ---------------- */
 const API_BASE = 'https://online-business-management.onrender.com';
-
 let products = [
-  { productId: 1, name: 'Split AC 1.5 Ton',        category: 'Home Appliances',    price: 45000, photo: 'https://images.unsplash.com/photo-1718203862467-c33159fdc504?w=400&h=300&fit=crop&auto=format&q=80', stock: 10 },
-  { productId: 2, name: 'Office Chair (Ergonomic)', category: 'Office Equipment',   price: 8500,  photo: 'https://images.unsplash.com/photo-1688578735352-9a6f2ac3b70a?w=400&h=300&fit=crop&auto=format&q=80', stock: 15 },
-  { productId: 3, name: "Men's Formal Shirt",       category: 'Men Clothing',       price: 1200,  photo: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=300&fit=crop&auto=format&q=80', stock: 30 },
-  { productId: 4, name: 'Smartphone X200',          category: 'Electronic Gadgets', price: 32000, photo: 'https://images.unsplash.com/photo-1578242174372-e26b3681587f?w=400&h=300&fit=crop&auto=format&q=80', stock: 8 },
+  { productId: 1, name: 'Split AC 1.5 Ton',        category: 'Home Appliances', price: 45000, photo: 'https://images.unsplash.com/photo-1718203862467-c33159fdc504?w=400&h=300&fit=crop&auto=format&q=80', stock: 10 },
+  { productId: 2, name: 'Double Door Refrigerator', category: 'Home Appliances', price: 38000, photo: 'https://images.unsplash.com/photo-1631048500348-35da7398a264?w=400&h=300&fit=crop&auto=format&q=80', stock: 12 },
+  { productId: 3, name: 'Front Load Washing Machine', category: 'Home Appliances', price: 29500, photo: 'https://images.unsplash.com/photo-1622473590925-e3616c0a41bf?w=400&h=300&fit=crop&auto=format&q=80', stock: 14 },
+  { productId: 4, name: 'Microwave Oven 25L',       category: 'Home Appliances', price: 9500,  photo: 'https://images.unsplash.com/photo-1596552183299-000ef779e88d?w=400&h=300&fit=crop&auto=format&q=80', stock: 20 },
 ];
 
 let orders = [];
@@ -288,7 +288,7 @@ function submitOrder() {
   } else {
     showProcessingPayment();
     setTimeout(() => {
-      const success = Math.random() < 0.85; 
+      const success = Math.random() < 0.85; // ৮৫% সময় সফল দেখাবে (demo purpose)
       finalizeOrder(qty, cname, cphone, caddress, paymethod, success);
     }, 2000);
   }
